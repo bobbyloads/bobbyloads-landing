@@ -1,14 +1,165 @@
-# In a terminal, navigate to where you want the project
-mkdir bobbyloads-landing
-cd bobbyloads-landing
-
-# Copy your index.html into this folder
-# (or `wget https://sandbox/mnt/data/bobbyloads_site.zip` then unzip)
-
-# Initialize Git and push up
-git init
-git add index.html
-git commit -m "Initial landing page"
-git branch -M main
-git remote add origin https://github.com/<your-username>/bobbyloads-landing.git
-git push -u origin main
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>BobbyLoads | 1500 Leads for $99</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body { width:100%; margin:0; padding:0; }
+    .wrapper { width:100%; display:flex; flex-direction:column; }
+    :root {
+      --black: #000;
+      --red: #e30613;
+      --yellow: #ffd700;
+      --text-light: #fff;
+      --bg-start: #660000;
+      --bg-end: #cc0000;
+    }
+    * { box-sizing:border-box; }
+    body {
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+      color: var(--text-light);
+      line-height:1.6;
+      margin:0;
+    }
+    nav {
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      padding:1rem 2rem;
+    }
+    nav .cta {
+      padding:0.5rem 1.5rem;
+      border:2px solid var(--yellow);
+      border-radius:9999px;
+      text-decoration:none;
+      color:var(--yellow);
+      font-weight:600;
+      text-shadow:2px 2px 6px rgba(0,0,0,0.8);
+      transition:background 0.3s, color 0.3s;
+    }
+    nav .cta:hover {
+      background:var(--yellow);
+      color:var(--black);
+      text-shadow:none;
+    }
+    .hero {
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      padding:4rem 2rem;
+    }
+    .hero-text { max-width:600px; }
+    .hero-text h1 {
+      font-size:3rem;
+      margin-bottom:1rem;
+      line-height:1.2;
+      text-shadow:4px 4px 8px rgba(0,0,0,0.7);
+    }
+    .hero-text p {
+      font-size:1.3rem;
+      font-weight:600;
+      margin-bottom:2rem;
+      opacity:0.9;
+      text-shadow:2px 2px 6px rgba(0,0,0,0.5);
+    }
+    .hero-text .btn-primary {
+      padding:0.75rem 2rem;
+      background:var(--yellow);
+      color:var(--black);
+      text-decoration:none;
+      font-size:1.3rem;
+      font-weight:600;
+      border-radius:50px;
+      transition:background 0.3s;
+      text-shadow:2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .hero-text .btn-primary:hover {
+      background:var(--black);
+      color:var(--yellow);
+      text-shadow:none;
+    }
+    section {
+      padding:4rem 2rem;
+      text-align:center;
+    }
+    section h2 {
+      font-size:2rem;
+      margin-bottom:2rem;
+      color:var(--yellow);
+      text-shadow:4px 4px 8px rgba(0,0,0,0.7);
+    }
+    .features {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:2rem;
+    }
+    .feature-card {
+      background:rgba(255,255,255,0.1);
+      border-radius:12px;
+      padding:2rem;
+      backdrop-filter:blur(8px);
+      transition:transform 0.3s;
+    }
+    .feature-card:hover { transform:translateY(-5px); }
+    .feature-card h3 {
+      font-size:1.25rem;
+      margin-bottom:0.5rem;
+      color:var(--yellow);
+      text-shadow:4px 4px 8px rgba(0,0,0,0.7);
+    }
+    .feature-card p {
+      color:var(--text-light);
+      text-shadow:2px 2px 6px rgba(0,0,0,0.5);
+    }
+    footer {
+      text-align:center;
+      padding:2rem;
+      font-size:0.9rem;
+      opacity:0.8;
+      text-shadow:2px 2px 6px rgba(0,0,0,0.5);
+      flex-shrink:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <a href="https://buy.stripe.com/test_XXXXXXXXXXXX" class="cta">Grab Your Leads Now! →</a>
+    </nav>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>1500 High-Quality<br>Transportation Leads</h1>
+        <p>Unlock direct shipper contacts with 93% email accuracy. You will receive the list via email after purchase. Don’t waste time scraping for leads—get this list and start emailing today!</p>
+        <a href="https://buy.stripe.com/test_XXXXXXXXXXXX" class="btn-primary">Grab Your Leads Now! →</a>
+      </div>
+    </div>
+    <section>
+      <h2>Why BobbyLoads?</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h3>1500 Verified Leads</h3>
+          <p>High-quality contacts ready for outreach</p>
+        </div>
+        <div class="feature-card">
+          <h3>93% Accuracy</h3>
+          <p>Emails scrubbed and validated</p>
+        </div>
+        <div class="feature-card">
+          <h3>Email Delivery</h3>
+          <p>List sent to your inbox after purchase</p>
+        </div>
+        <div class="feature-card">
+          <h3>Dedicated Support</h3>
+          <p>Email <a href="mailto:robert@cdlplug.com" style="color:var(--yellow);text-decoration:underline;">robert@cdlplug.com</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>&copy; 2025 BobbyLoads. All rights reserved.</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# In a terminal, navigate to where you want the project
+mkdir bobbyloads-landing
+cd bobbyloads-landing
+
+# Copy your index.html into this folder
+# (or `wget https://sandbox/mnt/data/bobbyloads_site.zip` then unzip)
+
+# Initialize Git and push up
+git init
+git add index.html
+git commit -m "Initial landing page"
+git branch -M main
+git remote add origin https://github.com/<your-username>/bobbyloads-landing.git
+git push -u origin main
